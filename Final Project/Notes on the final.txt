@@ -1,0 +1,15 @@
+This script opens a window that allows the user to both check for errors and add suffixes
+that are important to when exporting low and high poly models to substance painter.
+
+Substance Painter's baking software requires low poly objects to have the suffix _low
+and high to have _high. additionally, each item in low poly needs to have its equivalent
+in the high poly to be named identically (save for the suffixes). The error section of
+my script checks to make sure there are properly named items, and lets you know if you
+need to rename something in the low poly, or possibly combine something in the high poly.
+
+The difficult part about this script is being able to rename items in nested groups.
+I needed to find, and pass down a nested group name to each item because maya sees nested
+items with the same name as the same object unless you pass the group name along.
+
+The maya scene is the test scene i was working on, with the low and high poly group with
+nested items. That way you dont need to set anything up on your own if you want to test it.
